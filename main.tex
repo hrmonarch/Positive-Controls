@@ -1,0 +1,321 @@
+\documentclass[landscape,final,a4paper,fontscale=1.0]{baposter}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\graphicspath{{figures/}} % Directory in which figures are stored
+\definecolor{lightblue}{rgb}{0.145,0.6666,1} % Defines the color used for content box headers
+
+% set default options for poster(s)
+\setkeys[ba]{posterbox}{
+headerborder=closed, % Adds a border around the header of content boxes
+%colspacing=2em, % Column spacing
+borderColor=lightblue, % Border color
+headerColorOne=black, % Background color for the header in the content boxes (left side)
+headerColorTwo=lightblue, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt % Width of the border lines around content boxes
+}
+\setkeys[ba]{poster}{
+columns=2,% Number of column starts from 0
+colspacing=0.8em,% Column spacing
+headerheight=0.1\textheight, % Height of the header
+bgColorOne=white, % Background color for the gradient on the left side of the poster
+bgColorTwo=white, % Background color for the gradient on the right side of the poster
+eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
+}
+
+\begin{document}
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+%---------------------------------------------------------------------------
+%	maclemb photo  pg1
+%---------------------------------------------------------------------------
+\headerbox{MAC/L-EMB Bi plates - E.coli}
+{name=maclembPhoto,column=0,span=1,row=0}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/maclemb.JPG}
+\end{center}
+}
+%--------------------------------------------------------------------------
+%   maclemb = MAC/L-EMB Description  pg1
+%--------------------------------------------------------------------------
+\headerbox{MAC/L-EMB Bi plates - E.coli}{name=maclemb,column=1,span=1,row=0}{
+\begin{itemize}
+    \item On L-EMB agar, colonies of E.coli will appear blue-black with a green metallic sheen.
+    \item On MacConkey agar, colonies of E.coli will appear brick-red and may have a surrounding zone of precipitated bile.
+\end{itemize}
+}
+%---------------------------------------------------------------------------
+%	vrb photo   pg1
+%---------------------------------------------------------------------------
+\headerbox{Violet Red Bile (VRB) - Coliforms}{name=vrbPhoto,column=0,span=1,row=1,below=maclembPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbCrop.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	vrb = Violet Red Bile VRB (Coliforms)   pg1
+%-------------------------------------------------------------------------
+\headerbox{Violet Red Bile (VRB) - Coliforms}
+{name=vrb,column=1,aligned=vrbPhoto,span=1}{Coliform colonies are purple-red and 0.5 mm in diameter or larger, surrounded by a zone of precipitated bile acids. Note that coliform colonies on crowded plates (more than 150 colonies) may be considerably less than 0.5 mm in diameter).
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+{}
+%---------------------------------------------------------------------------
+%	VRBG photo   pg2 
+%---------------------------------------------------------------------------
+\headerbox{VRB With Glucose - Enterobacteriaceae}{name=vrbgPhoto,column=0,span=1,row=0}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbg.jpg}
+\end{center}
+}
+%--------------------------------------------------------------------------
+%   VRBG Description  pg2 
+%--------------------------------------------------------------------------
+\headerbox{VRB With Glucose - Enterobacteriaceae}{name=vrbg,column=1,aligned=vrbgPhoto,span=1}{
+Enterobacteriaceae should appear as well-developed, red or reddish colonies on VRB with Glucose and Lactose Agar plates.
+}
+%---------------------------------------------------------------------------
+%	VRBGL photo   pg2
+%---------------------------------------------------------------------------
+\headerbox{VRB with Glucose and Lactose - Enterobacteriaceae}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	VRBGL description   pg2
+%-------------------------------------------------------------------------
+\headerbox{VRB with Glucose and Lactose - Enterobacteriaceae}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Enterobacteriaceae should appear as well-developed, red or reddish colonies on VRB with Glucose and Lactose Agar plates.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+
+
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+%---------------------------------------------------------------------------
+%	LST photo   pg3
+%---------------------------------------------------------------------------
+\headerbox{LST (Coliforms and E.coli)}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	LST description   pg3
+%-------------------------------------------------------------------------
+\headerbox{VRB with Glucose and Lactose - Enterobacteriaceae}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Enterobacteriaceae should appear as well-developed, red or reddish colonies on VRB with Glucose and Lactose Agar plates.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+%---------------------------------------------------------------------------
+%	EC Broth photo  pg3
+%---------------------------------------------------------------------------
+\headerbox{EC Broth (E.coli)}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	EC Broth description  pg3
+%-------------------------------------------------------------------------
+\headerbox{VRB with Glucose and Lactose - Enterobacteriaceae}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Enterobacteriaceae should appear as well-developed, red or reddish colonies on VRB with Glucose and Lactose Agar plates.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+{}
+%---------------------------------------------------------------------------
+%	BPA photo   pg4
+%---------------------------------------------------------------------------
+\headerbox{Baird Parker Agar (BPA)- Staph. aureus}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	BPA description  pg4
+%-------------------------------------------------------------------------
+\headerbox{Baird Parker Agar (BPA)- Staph. aureus}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{S.aureus should appear as black shiny convex colonies surrounded by 2-5mm clear zones on BPA.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+%---------------------------------------------------------------------------
+%	DRBC photo  pg4
+%---------------------------------------------------------------------------
+\headerbox{Dichloran Rose Bengal Chloramphenicol (DRBC) - Yeast}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	DRBC description  pg4
+%-------------------------------------------------------------------------
+\headerbox{VRB with Glucose and Lactose - Enterobacteriaceae}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Enterobacteriaceae should appear as well-developed, red or reddish colonies on VRB with Glucose and Lactose Agar plates.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+{}
+%---------------------------------------------------------------------------
+%	MYP photo   pg5
+%---------------------------------------------------------------------------
+\headerbox{Mannitol-Egg Yolk Polymixin (MYP)- B.cereus}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	MYP description  pg5
+%-------------------------------------------------------------------------
+\headerbox{Mannitol-Egg Yolk Polymixin (MYP)- B.cereus}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{MYP: B. cereus colonies are usually a pink color which becomes more intense after additional incubation surrounded by precipitate zone. Non- B. cereus colonies will usually appear yellow.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+%---------------------------------------------------------------------------
+%	CMA photo   pg5
+%---------------------------------------------------------------------------
+\headerbox{Cetrimide Agar (CA) - Pseudomonas Aeruginosa}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	CMA description  pg5
+%-------------------------------------------------------------------------
+\headerbox{Cetrimide Agar (CA) - Pseudomonas Aeruginosa}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Greenish colonies. Fluorescence under ultra violet light is blue.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+{}
+%---------------------------------------------------------------------------
+%	PAF photo  pg6
+%---------------------------------------------------------------------------
+\headerbox{Pseudomonas Agar F (PAF)- Pseudomonas aeruginosa}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	PAF description   pg6
+%-------------------------------------------------------------------------
+\headerbox{Pseudomonas Agar F (PAF)- Pseudomonas aeruginosa}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{PAF: Generally colorless to yellowish. Fluorescence under UV light is yellow.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+%---------------------------------------------------------------------------
+%	PAP photo   pg6
+%---------------------------------------------------------------------------
+\headerbox{Pseudomonas Agar P (PAP)- Pseudomonas aeruginosa}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	PAP description   pg6
+%-------------------------------------------------------------------------
+\headerbox{Pseudomonas Agar P (PAP)- Pseudomonas aeruginosa}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{PAP: Generally greenish. Fluorescence under UV light is blue.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+{}
+%---------------------------------------------------------------------------
+%	BS photo  pg7
+%---------------------------------------------------------------------------
+\headerbox{Bismuth Sulphate (BS)- Salmonella}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	BS description  pg7
+%-------------------------------------------------------------------------
+\headerbox{Bismuth Sulphate (BS)- Salmonella}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Salmonella colonies should appear as brown, gray, or black colonies with or without metallic sheen. Surrounding medium is usually brown at first, turning black with increasing incubation time. Some straind may produce green coloines with little or no darkening of surrounding medium.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+%---------------------------------------------------------------------------
+%	HE photo  pg7
+%---------------------------------------------------------------------------
+\headerbox{Hektoen Enteric Agar (HE)- Salmonella}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	HE description  pg7
+%-------------------------------------------------------------------------
+\headerbox{Hektoen Enteric Agar (HE)- Salmonella}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Salmonella colonies should appear as blue-green to blue colonies with or without black centers. Atypically, a few Salmonella strains produce yellow colonies with or without black centers. Many salmonella cultures may produce colonies with large, glossy black centers or may appear as almost completely black colonies.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+\begin{poster}
+{}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{\bf\textsc{Positive Controls}} 
+{\textsc{in the 25 Foods Lab}}
+{\includegraphics[height = 4em, width = 4em]{logo.png}} % logo on the left
+{}
+{}
+%---------------------------------------------------------------------------
+%	XLD photo  pg8
+%---------------------------------------------------------------------------
+\headerbox{Xylose Lysine (XLD)- Salmonella}{name=vrbglPhoto,column=0,span=1,row=0,below=vrbgPhoto}{
+\begin{center}
+    \includegraphics[width=0.98\linewidth]{figures/vrbgl.JPG}
+\end{center}
+}
+%-------------------------------------------------------------------------
+%	XLD description  pg8
+%-------------------------------------------------------------------------
+\headerbox{Xylose Lysine (XLD)- Salmonella}{name=vrbgl,column=1,aligned=vrbglPhoto,span=1}{Pink colonies with or without black centers. Atypically, a few Salmonella strains produce yellow colonies with or without black centers.
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+\end{poster}
+\end{document}
